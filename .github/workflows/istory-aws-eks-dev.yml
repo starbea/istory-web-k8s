@@ -14,7 +14,8 @@ jobs:
     environment: k8s-dev # 환경 변수 및 시크릿 저장공간
     env:
       DOCKER_IMAGE: ${{ secrets.DOCKER_USERNAME }}/istory
-      DOCKER_TAG: ${{ github.run_number }}
+      # DOCKER_TAG: ${{ github.run_number }}
+      DOCKER_TAG: ${{ github.sha }}
     services:
       mysql:
         image: mysql:8.0
