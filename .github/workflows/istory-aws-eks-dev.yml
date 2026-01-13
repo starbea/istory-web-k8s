@@ -161,10 +161,10 @@ jobs:
 
         # 이미지 태그 변경
       - name: Update image in patch-deploy.yml (yq)
-        run: |
+        run: | 
           yq -i '
             (.spec.template.spec.containers[] | select(.name=="istory")).image
-            = "dangtong76/istory:${{ github.sha }}"
+            = "starmk/istory:${{ github.sha }}"
           ' overlay/aws-dev/patch-deploy.yml
 
       - name: 서비스 리포지토리 최종 업데이트
