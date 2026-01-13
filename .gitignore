@@ -31,7 +31,7 @@ out/
 !**/src/test/**/out/
 
 **/.env.secret 
-
+.github/secret.sh
 
 ### NetBeans ###
 /nbproject/private/
